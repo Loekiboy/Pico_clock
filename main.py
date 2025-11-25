@@ -1946,8 +1946,8 @@ def draw_number(num,x,y):
         
 if __name__=='__main__':
     
-    ssid = 'housekamer_2.4G'
-    password = '444Geesten'
+    ssid = 'yourSSID'
+    password = 'yourPassword'
 
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)

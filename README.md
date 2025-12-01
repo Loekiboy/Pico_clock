@@ -1,1 +1,1 @@
-Change WiFi credentials to your credentials ( line 1949 and line 1950)
+Change WiFi credentials to your credentials ( line 1942 and line 1943)

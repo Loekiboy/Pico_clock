@@ -35,6 +35,7 @@ import utime
 import time
 import network
 import urequests
+
 # Set up and initialise Pico Display
 print("Letters aan het laden.")
 draw_buf =[]
@@ -1877,15 +1878,7 @@ def update_time():
     time = (str(r.text).split("dateTime")[1]).split("T")[1][:8]
     print("Datum: "+date+"\nTijd: "+time)
     
-    import urllib, json
-    # Let er even op dat je je key aanpast
-    key = "2f3005adf2ae720fcb847e3905a3ba5b"
-    plaats = "nijmegen"
-    url = "http://api.openweathermap.org/data/2.5/weather?q=" + plaats + "&appid=" + key + "&units=metric"
-    response = urllib.urlopen(url)
-    data = json.loads(response.read())
-    temp = data['main']['temp']
-    print (temp)
+    
     #print("Datum: "+date+"\nTijd: "+time_)
     #	print(s)
     r.close()
@@ -1946,8 +1939,8 @@ def draw_number(num,x,y):
         
 if __name__=='__main__':
     
-    ssid = 'yourSSID'
-    password = 'yourPassword'
+    ssid = 'your_wifi_ssid'
+    password = 'your_wifi_password'
 
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
